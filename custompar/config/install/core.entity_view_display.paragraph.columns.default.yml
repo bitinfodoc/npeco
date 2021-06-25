@@ -1,0 +1,32 @@
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.columns.field_columns_image
+    - field.field.paragraph.columns.field_columns_text
+    - paragraphs.paragraphs_type.columns
+  module:
+    - image
+    - text
+id: paragraph.columns.default
+targetEntityType: paragraph
+bundle: columns
+mode: default
+content:
+  field_columns_image:
+    weight: 0
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_columns_text:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

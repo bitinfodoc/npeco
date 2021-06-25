@@ -1,0 +1,63 @@
+{
+  "_from": "viewport-checker",
+  "_id": "viewport-checker@2.0.0",
+  "_inBundle": false,
+  "_integrity": "sha512-H5XhP63thcPB95I/0YKnIqtHXmEw5HEVBzT+HEVe6XDXBDMSrhitxgF4g2hyCYL7BwE+exIDrHHC8BnBu9q9kw==",
+  "_location": "/viewport-checker",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "viewport-checker",
+    "name": "viewport-checker",
+    "escapedName": "viewport-checker",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/viewport-checker/-/viewport-checker-2.0.0.tgz",
+  "_shasum": "f3d937ae7a5e5bec5d99507e8cff24ceec3480ad",
+  "_spec": "viewport-checker",
+  "_where": "c:\\Users\\Proha\\PhpstormProjects\\drupal",
+  "author": {
+    "name": "Dirk Groenen"
+  },
+  "bugs": {
+    "url": "https://github.com/dirkgroenen/viewport-checker/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "Little script that detects if an element is in the viewport and adds a class to it.",
+  "devDependencies": {
+    "@types/node": "^13.11.0",
+    "rollup": "^2.3.3",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-sourcemaps": "^0.5.0",
+    "rollup-plugin-terser": "^5.3.0",
+    "rollup-plugin-typescript2": "^0.27.0",
+    "semantic-release": "^17.0.4",
+    "typescript": "^3.8"
+  },
+  "files": [
+    "dist"
+  ],
+  "homepage": "https://github.com/dirkgroenen/viewport-checker",
+  "license": "MIT",
+  "main": "dist/viewportChecker.umd.js",
+  "module": "dist/viewportChecker.es5.js",
+  "name": "viewport-checker",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dirkgroenen/viewport-checker.git"
+  },
+  "scripts": {
+    "build": "rollup -c rollup.config.ts",
+    "clean": "rm -r ./dist"
+  },
+  "version": "2.0.0"
+}

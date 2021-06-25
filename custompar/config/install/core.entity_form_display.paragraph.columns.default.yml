@@ -1,0 +1,35 @@
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.columns.field_columns_image
+    - field.field.paragraph.columns.field_columns_text
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.columns
+  module:
+    - image
+    - text
+id: paragraph.columns.default
+targetEntityType: paragraph
+bundle: columns
+mode: default
+content:
+  field_columns_image:
+    weight: 0
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_columns_text:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+hidden:
+  created: true
+  status: true

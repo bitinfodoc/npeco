@@ -1,0 +1,15 @@
+<?php
+/**
+ * @file
+ * Main file of Image class module.
+ */
+
+function custompar_preprocess_paragraph__contact_form(&$variables)
+{
+//    dsm($variables['elements']['#paragraph']->get('field_insert_form')->getValue()[0]['value']);
+    if ($variables['elements']['#paragraph']->get('field_insert_form')->getValue()[0]['value'] != 0) {
+        $form = \Drupal::formBuilder()->getForm('Drupal\custompar\Form\CustomContactForm');
+        $variables['contact_form'] = $form;
+    }
+
+}

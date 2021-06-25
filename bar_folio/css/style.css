@@ -1,0 +1,93 @@
+/**
+ * @file
+ * Subtheme specific CSS.
+ */
+
+.clear {
+    clear: both;
+}
+.text-color-white {
+    color: rgba(255,255,255,1);
+}
+.text-color-balck {
+}
+
+.fwb {
+    background-size: cover !important;
+    background-position: center center !important;
+}
+.repeat-3 {
+    --animate-repeat: 3;
+}
+.hidden {
+    opacity:0;
+}
+.visible {
+    opacity:1;
+}
+.btn {
+    border-radius: 25px;
+}
+.btn-success {
+    background: rgb(43,41,55);
+    background-color: rgba(41,137,204,1) ;
+    /*background: linear-gradient(90deg, rgba(43,41,55,1) 0%, rgba(170,160,247,1) 35%, rgba(41,137,204,1) 100%);*/
+    border-color: rgba(43,41,55,1);
+}
+.btn-success:hover {
+    background: rgb(43,41,55);
+    background-color: rgba(43,41,55,1) ;
+    /*background: linear-gradient(90deg, rgba(43,41,55,1) 0%, rgba(170,160,247,1) 35%, rgba(41,137,204,1) 100%);*/
+    border-color: rgba(43,41,55,1);
+}
+
+.field--name-field-features-image img{
+    max-width: 100px;
+    height: auto;
+}
+.no-display {
+    display: none;
+}
+.black-border {
+    border: 2px solid #CC0000;
+    border-radius: 2px;
+}
+.white-border {
+    border: 2px solid #fff;
+    border-radius: 2px;
+}
+
+.js-form-managed-file button{
+    position: absolute;
+    right: 0px;
+    top: 0;
+    margin: 0;
+}
+.field--name-field-features-image {
+    width: 100%;
+    padding: 0 30px;
+}
+
+.field--name-field-features-image img {
+    min-width: 100px;
+}
+
+.domain-list {
+    display: inline-block;
+}
+.domain-pointless-validator-class select{
+    background: #00b3ee;
+    border-radius: 25px;
+    padding: 5px;
+    border-color: #0e69be;
+    box-shadow: #00b3ee;
+}
+.pt-10 {
+    padding-top: 100px;
+}
+.pb-10 {
+    padding-bottom: 100px;
+}
+.w-30 {
+    width: 30%;
+}

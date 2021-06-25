@@ -1,0 +1,53 @@
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.paragraph_container.field_par_columns
+    - field.field.paragraph.paragraph_container.field_par_features
+    - field.field.paragraph.paragraph_container.field_par_views
+    - field.field.paragraph.paragraph_container.field_title
+    - paragraphs.paragraphs_type.paragraph_container
+  module:
+    - entity_reference_revisions
+    - viewsreference
+id: paragraph.paragraph_container.default
+targetEntityType: paragraph
+bundle: paragraph_container
+mode: default
+content:
+  field_par_columns:
+    type: entity_reference_revisions_entity_view
+    weight: 3
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_par_features:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_par_views:
+    weight: 4
+    label: hidden
+    settings:
+      plugin_types:
+        - block
+    third_party_settings: {  }
+    type: viewsreference_formatter
+    region: content
+  field_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

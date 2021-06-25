@@ -1,0 +1,20 @@
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_features_text
+    - paragraphs.paragraphs_type.features
+  module:
+    - text
+id: paragraph.features.field_features_text
+field_name: field_features_text
+entity_type: paragraph
+bundle: features
+label: features_text
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

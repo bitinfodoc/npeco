@@ -1,0 +1,14 @@
+langcode: ru
+status: true
+dependencies:
+  module:
+    - custompar
+id: columns
+label: columns
+icon_uuid: null
+icon_default: null
+description: 'Две колонки'
+behavior_plugins:
+  custompar_paragraph_inner:
+    enabled: true
+  custompar_paragraph_title: {  }

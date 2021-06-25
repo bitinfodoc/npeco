@@ -1,0 +1,49 @@
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_paragraph
+    - node.type.page
+    - paragraphs.paragraphs_type.fullwidth
+    - paragraphs.paragraphs_type.image_and_text
+    - paragraphs.paragraphs_type.paragraph_container
+  module:
+    - entity_reference_revisions
+id: node.page.field_paragraph
+field_name: field_paragraph
+entity_type: node
+bundle: page
+label: paragraph
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      paragraph_container: paragraph_container
+      fullwidth: fullwidth
+      image_and_text: image_and_text
+    target_bundles_drag_drop:
+      features:
+        weight: 2
+        enabled: false
+      columns:
+        weight: 3
+        enabled: false
+      paragraph_container:
+        enabled: true
+        weight: 6
+      from_library:
+        weight: 7
+        enabled: false
+      fullwidth:
+        enabled: true
+        weight: 9
+      image_and_text:
+        enabled: true
+        weight: 11
+field_type: entity_reference_revisions

@@ -1,0 +1,17 @@
+langcode: ru
+status: true
+dependencies:
+  module:
+    - custompar
+id: paragraph_container
+label: paragraph_container
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins:
+  custompar_paragraph_title:
+    enabled: true
+  custompar_paragraph_inner: {  }
+  custompar_paragraph_align:
+    enabled: true
+  custompar_paragraph_button: {  }

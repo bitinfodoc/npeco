@@ -1,0 +1,20 @@
+langcode: ru
+status: true
+dependencies:
+  module:
+    - custompar
+id: features
+label: features
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins:
+  custompar_paragraph_title:
+    enabled: true
+  custompar_paragraph_inner:
+    enabled: true
+  custompar_paragraph_button:
+    enabled: true
+  custompar_paragraph_align: {  }
+  custompar_paragraph_hover:
+    enabled: true

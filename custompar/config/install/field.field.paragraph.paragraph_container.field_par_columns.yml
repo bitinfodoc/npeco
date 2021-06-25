@@ -1,0 +1,39 @@
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_par_columns
+    - paragraphs.paragraphs_type.columns
+    - paragraphs.paragraphs_type.paragraph_container
+  module:
+    - entity_reference_revisions
+id: paragraph.paragraph_container.field_par_columns
+field_name: field_par_columns
+entity_type: paragraph
+bundle: paragraph_container
+label: par_columns
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      columns: columns
+    target_bundles_drag_drop:
+      columns:
+        enabled: true
+        weight: 5
+      features:
+        weight: 6
+        enabled: false
+      from_library:
+        weight: 7
+        enabled: false
+      paragraph_container:
+        weight: 8
+        enabled: false
+field_type: entity_reference_revisions
