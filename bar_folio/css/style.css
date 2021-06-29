@@ -75,6 +75,10 @@
 .domain-list {
     display: inline-block;
 }
+.paragraph-id--19 .color-layer {
+    background-color: rgba(0,0,0,.5);
+
+}
 .domain-pointless-validator-class select{
     background: #00b3ee;
     border-radius: 25px;
@@ -90,4 +94,14 @@
 }
 .w-30 {
     width: 30%;
+}
+.bg-dark {
+    background: rgb(2,0,36);
+    background: linear-gradient( 50deg, rgb(2, 0, 36) 0%, rgb(0, 0, 0) 35%, rgb(57, 57, 57) 100%);
+}
+.bg-dark a {
+    color: #00b30e;
+}
+.bg-dark a:hover {
+    color: #027b0b;
 }

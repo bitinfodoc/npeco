@@ -74,7 +74,7 @@
 %}
 <article{{ attributes.addClass(classes) }}>
   <header>
-      {{ content.field_youtube }}
+      {{ content.field_youtube[0] }}
     {{ title_prefix }}
     {% if label and not page %}
       <h4{{ title_attributes.addClass('node__title') }}>

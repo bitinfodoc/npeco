@@ -3,6 +3,8 @@
  * @file
  * Main file of Image class module.
  */
+use Drupal\Core\Render\Markup;
+
 
 function custompar_preprocess_paragraph__contact_form(&$variables)
 {
@@ -12,4 +14,22 @@ function custompar_preprocess_paragraph__contact_form(&$variables)
         $variables['contact_form'] = $form;
     }
 
+}
+
+
+
+/**
+ * Implements hook_mail().
+ */
+function custompar_mail( $key, &$message, $params) {
+    $options = [
+        'langcode' => $message['langcode'],
+    ];
+    switch ($key) {
+        case 'important_event':
+            $message['subject'] = t('Number of updated nodes: @num', ['@num' => $params['updated_nodes']], $options);
+            $message['body'][] = Markup::create($params['message']);
+            //$message['body'][] = $params['message'];
+            break;
+    }
 }
