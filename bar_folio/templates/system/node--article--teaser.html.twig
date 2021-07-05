@@ -75,30 +75,30 @@
 
     <div class="row">
 
-
         {% if content.field_image[0] %}
-            <div class="col-sm-12 col-md-12 col-lg-4 flex-warp">
+            <div class="col-sm-12 col-md-12 col-lg-2 flex-warp">
                 {{ content.field_image[0] }}
             </div>
         {% elseif content.field_youtube[0] and content.field_image[0] is empty %}
-            <div class="col-sm-12 col-md-12 col-lg-4 flex-warp">
+            <div class="col-sm-12 col-md-12 col-lg-2 flex-warp">
                 {{ content.field_youtube[0] }}
             </div>
         {% endif %}
 
 
+
         {% if content.field_youtube[0] is empty and content.field_image[0] is empty %}
             <div class=" col-md-12 col-lg-12 flex-warp">
         {% else %}
-            <div class=" col-md-12 col-lg-8 flex-warp">
+            <div class=" col-md-12 col-lg-10 flex-warp">
         {% endif %}
 
                 <header>
                     {{ title_prefix }}
                     {% if not page %}
-                        <h4{{ title_attributes.addClass('node__title') }}>
+                        <h5{{ title_attributes.addClass('node__title') }}>
                             <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-                        </h4>
+                        </h5>
                     {% endif %}
                     {{ title_suffix }}
                     {% if display_submitted %}

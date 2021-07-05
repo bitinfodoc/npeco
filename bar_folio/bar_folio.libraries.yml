@@ -35,3 +35,9 @@ color.preview:
     color/preview.js: {}
   dependencies:
     - color/drupal.color
+bar_folio_fonts:
+  version: VERSION
+  css:
+    component:
+      fonts/bar_folio_fonts.css: {}
+      //fonts.googleapis.com/css?family=Vollkorn:500,300|Exo:400,400italic&display=swap: {}

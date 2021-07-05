@@ -53,9 +53,9 @@
     {# // TODO: pass url to css file into module #}
 
     <div{{ attributes.addClass(classes) }} style="background: url('{{ file_url(content.field_fullwidth_image['#items'].entity.uri.value) }}')">
-        <div class="color-layer">
+        <div class="color-layer mr--md-5 ml-md-5 pt-3 pb-3">
             {% block content %}
-                <div class="container p-5">
+                <div class="container p-lg-5">
 
                     {{ content.field_title }}
                     {{ content.field_subtitle }}

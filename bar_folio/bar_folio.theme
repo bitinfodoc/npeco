@@ -33,8 +33,17 @@ function bar_folio_form_system_theme_settings_alter(&$form, FormStateInterface $
       'bg-white' => t('White'),
       'bg-transparent' => t('Transparent'),
   );
+
+    $form['fonts']['fonts']['bootstrap_barrio_google_fonts']['#options']['bar_folio_fonts'] = 'Bar folio fonts';
 }
 
+function bar_folio_preprocess_page(&$variables)
+{
+    $fonts = theme_get_setting('bootstrap_barrio_google_fonts');
+    if ($fonts) {
+        $variables['#attached']['library'][] = ($fonts == 'bar_folio_fonts' ? 'bar_folio' : 'bootstrap_barrio') . '/' . $fonts;
+    }
+}
 /**
  * Implements hook_theme_suggestions_page_alter().
  */

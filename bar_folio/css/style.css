@@ -65,7 +65,6 @@
 }
 .field--name-field-features-image {
     width: 100%;
-    padding: 0 30px;
 }
 
 .field--name-field-features-image img {
@@ -75,9 +74,8 @@
 .domain-list {
     display: inline-block;
 }
-.paragraph-id--19 .color-layer {
+.color-layer {
     background-color: rgba(0,0,0,.5);
-
 }
 .domain-pointless-validator-class select{
     background: #00b3ee;

@@ -129,14 +129,12 @@
     <div id="main-wrapper" class="layout-main-wrapper clearfix">
       {% block content %}
         <div id="main" >
-          {{ page.breadcrumb }}
-          <div class="row row-offcanvas row-offcanvas-left clearfix">
-              <main{{ content_attributes }}>
+
+          <div class="row-offcanvas row-offcanvas-left clearfix">
+              <main{{ content_attributes.removeClass('col') }}>
                   <section class="section">
                       <a id="main-content" tabindex="-1"></a>
-                      <div class="container-fluid">
-                          {{ page.content_top }}s
-                      </div>
+
                       {{ page.content }}
                   </section>
               </main>
