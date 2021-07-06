@@ -30,7 +30,7 @@
 }
 .btn-success {
     background: rgb(43,41,55);
-    background-color: rgba(41,137,204,1) ;
+    background-color: rgba(41,137,204,1);
     /*background: linear-gradient(90deg, rgba(43,41,55,1) 0%, rgba(170,160,247,1) 35%, rgba(41,137,204,1) 100%);*/
     border-color: rgba(43,41,55,1);
 }
@@ -102,4 +102,13 @@
 }
 .bg-dark a:hover {
     color: #027b0b;
+}
+
+.more-link {
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.node--view-mode-centred-teaser {
+    border-bottom: 1px rgba(0,0,0, .75);
 }

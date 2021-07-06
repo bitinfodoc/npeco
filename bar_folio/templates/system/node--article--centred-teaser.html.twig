@@ -61,8 +61,7 @@
 #}
 {{ attach_library('bootstrap_barrio/node') }}
 
-{%
-  set classes = [
+{% set classes = [
     'node',
     'node--type-' ~ node.bundle|clean_class,
     node.isPromoted() ? 'node--promoted',
@@ -70,32 +69,50 @@
     not node.isPublished() ? 'node--unpublished',
     view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
     'clearfix',
-    'pb-3',
-  ]
-%}
+    'h-100',
+] %}
 <article{{ attributes.addClass(classes) }}>
-  <header>
-      {{ content.field_youtube[0] }}
-    {{ title_prefix }}
-    {% if label and not page %}
-      <h5{{ title_attributes.addClass('node__title', 'pt-2') }}>
-        <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-      </h5>
-    {% endif %}
-    {{ title_suffix }}
-    {% if display_submitted %}
-      <div class="node__meta">
-        {{ author_picture }}
-        {% block submitted %}
-          <em{{ author_attributes }}>
-            {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
-          </em>
-        {% endblock %}
-        {{ metadata }} 
-      </div>
-    {% endif %}
-  </header>
-  <div{{ content_attributes.addClass('node__content', 'clearfix') }}>
 
-  </div>
+    <div class="w-100">
+        <header>
+
+
+
+            {{ title_prefix }}
+            {% if not page %}
+                <h5{{ title_attributes.addClass('node__title') }}>
+                    <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+                </h5>
+            {% endif %}
+            {{ title_suffix }}
+            {% if display_submitted %}
+                <div class="node__meta pb-2">
+                    {{ author_picture }}
+                    {% block submitted %}
+                        <em{{ author_attributes }}>
+                            {% trans %}Submitted {{ date }}{% endtrans %}
+                        </em>
+                    {% endblock %}
+                    {{ metadata }}
+                </div>
+            {% endif %}
+
+            {% if content.field_image[0] %}
+
+                {{ content.field_image[0] }}
+
+            {% elseif content.field_youtube[0] and content.field_image[0] is empty %}
+
+                {{ content.field_youtube[0] }}
+
+            {% endif %}
+
+        </header>
+
+        <div{{ content_attributes.addClass('node__content', 'clearfix') }}>
+            {{ content.body }}
+        </div>
+
+
+    </div>
 </article>

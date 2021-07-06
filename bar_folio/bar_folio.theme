@@ -45,10 +45,18 @@ function bar_folio_preprocess_page(&$variables)
     }
 }
 /**
- * Implements hook_theme_suggestions_page_alter().
+ * Implements bar_folio_theme_suggestions_page_alter().
  */
 function bar_folio_theme_suggestions_page_alter(array &$suggestions, array $variables) {
     if ($node = \Drupal::routeMatch()->getParameter('node')) {
         $suggestions[] = 'page__' . $node->bundle();
     }
+}
+
+
+function bar_folio_preprocess_views_view(&$vars){
+
+        $vars['more']['#options']['attributes']['class'] = array(
+            'btn', 'btn-default'
+        );
 }

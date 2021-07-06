@@ -31,14 +31,14 @@ body {
 
 a,
 .link {
-    color: #0071b3;
+    color: #04760b;
 }
 
 a:hover,
 a:focus,
 .link:hover,
 .link:focus {
-    color: #018fe2;
+    color: #00b30e;
 }
 
 a:active,
@@ -53,7 +53,7 @@ a:active,
 
 .page-link,
 .page-link:hover {
-    color: #0071b3;
+    color: #04760b;
 }
 
 .sidebar .block {
